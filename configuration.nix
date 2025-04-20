@@ -87,6 +87,7 @@
      font-awesome
      jetbrains-mono
      inter
+     nerdfonts
    ];
    environment.shells = with pkgs; [ zsh ];
    environment.systemPackages = with pkgs; [
@@ -98,6 +99,8 @@
      home-manager
      chromium
      hiddify-app
+     neofetch
+     pfetch
    ];
 
   # Some programs need SUID wrappers, can be configured further or are

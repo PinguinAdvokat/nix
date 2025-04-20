@@ -99,7 +99,7 @@
         "size 500 700,^(hiddify)$"
         "size 800 450,^(alacritty)$"
         "float,^(nemo)$"
-        "size 600 320,^(nemo)$"
+        "float,^(org.telegram.desktop)$"
      ];
 
       windowrulev2 = [
