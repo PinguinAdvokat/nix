@@ -1,5 +1,3 @@
-{
-
 { config, pkgs, ... }:
 
 {
@@ -35,23 +33,14 @@
           public_key = "q0XOwfhGdF_w6Kk0u3l_yQCBomvFDq3NMBg7YwwqwHI";
           short_id = "bf3aa63501";
         };
-      },
+      };
       packet_encoding = "xudp";
     }
   ];
   route = {
     final = "main-max";
     auto_detect_interface = true;
-    rules = [
-      {
-        geoip = [ "private" ];
-        outbound = "direct";
-      }
-    ];
   };
 };
 };
-}
-
-
 }
