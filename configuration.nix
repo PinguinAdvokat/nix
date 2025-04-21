@@ -55,12 +55,11 @@
   # services.printing.enable = true;
 
   # Enable sound.
-  # hardware.pulseaudio.enable = true;
-  # OR
-  # services.pipewire = {
-  #   enable = true;
-  #   pulse.enable = true;
-  # };
+   hardware.pulseaudio.enable = false;
+   services.pipewire = {
+     enable = true;
+     pulse.enable = true;
+   };
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
@@ -75,7 +74,7 @@
      ];
    };
  
-
+  security.polkit.enable = true;
   nixpkgs.config.allowUnfree = true; 
   nix.settings.experimental-features = ["nix-command" "flakes"];
   # programs.firefox.enable = true;
@@ -98,9 +97,14 @@
      firefox
      home-manager
      chromium
-     hiddify-app
      neofetch
      pfetch
+     pavucontrol
+     hiddify-app
+     nekoray
+     hyprpolkitagent
+     discord
+     wireplumber
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -120,7 +124,7 @@
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+   networking.firewall.enable = false;
 
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you

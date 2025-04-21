@@ -24,6 +24,7 @@
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
         "hyprctl setcursor Bibata-Modern-Ice 22"
+        "systemctl --user start hyprpolkitagent"
       ];
 
 
@@ -100,6 +101,7 @@
         "size 800 450,^(alacritty)$"
         "float,^(nemo)$"
         "float,^(org.telegram.desktop)$"
+	"size 400 600,^(org.telegram.desktop)$"
      ];
 
       windowrulev2 = [
