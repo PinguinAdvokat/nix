@@ -60,6 +60,9 @@
      enable = true;
      pulse.enable = true;
    };
+   hardware.bluetooth.enable = true;
+   hardware.bluetooth.powerOnBoot = true;
+   services.blueman.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
@@ -79,6 +82,7 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
   # programs.firefox.enable = true;
   programs.hyprland.enable = true;
+  programs.zsh.enable = true;
   networking.networkmanager.enable = true;
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -100,11 +104,10 @@
      neofetch
      pfetch
      pavucontrol
-     hiddify-app
-     nekoray
      hyprpolkitagent
      discord
      wireplumber
+     go
    ];
 
   # Some programs need SUID wrappers, can be configured further or are

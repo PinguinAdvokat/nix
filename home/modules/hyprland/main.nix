@@ -25,13 +25,15 @@
         "wl-paste --type image --watch cliphist store"
         "hyprctl setcursor Bibata-Modern-Ice 22"
         "systemctl --user start hyprpolkitagent"
+        "gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3"
+        "gsettings set org.gnome.desktop.interface color-scheme matcha-gtk-theme"
       ];
 
 
       general = {
         gaps_in = 5;
-        gaps_out = 20;
-        border_size = 3;
+        gaps_out = 10;
+        border_size = 0;
         "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
         "col.inactive_border" = "rgba(595959aa)";
 
@@ -43,8 +45,8 @@
 
         blur = {
           enabled = true;
-          size = 16;
-          passes = 2;
+          size = 8;
+          passes = 1;
           new_optimizations = true;
         };
 
@@ -98,10 +100,24 @@
         #programs rules
         "float,^(hiddify)$"
         "size 500 700,^(hiddify)$"
-        "size 800 450,^(alacritty)$"
+
+        "size 650 450,^(Alacritty)$"
+        "float,^(Alacritty)$"
+
         "float,^(nemo)$"
+
         "float,^(org.telegram.desktop)$"
 	"size 400 600,^(org.telegram.desktop)$"
+
+        "float,^(org.pulseaudio.pavucontrol)$"
+        "size 468 284,^(org.pulseaudio.pavucontrol)$"
+        "move 835 576,^(org.pulseaudio.pavucontrol)$"
+  
+        "float, title:Картинка в картинке"
+
+        "float,^(.blueman-manager-wrapped)$"
+        "size 537 321,^(.blueman-manager-wrapped)$"
+        "move 128 540,^(.blueman-manager-wrapped)$"
      ];
 
       windowrulev2 = [
@@ -123,10 +139,6 @@
         "nofocus, class:^(xwaylandvideobridge)$"
       ];
 
-      workspace = [
-        "w[tv1], gapsout:0, gapsin:0"
-        "f[1], gapsout:0, gapsin:0"
-      ];
     };
   };
 }

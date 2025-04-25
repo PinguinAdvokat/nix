@@ -19,7 +19,7 @@
 
       server = "185.239.141.180";
       server_port = 443;
-      uuid = "71af25f1-6b2e-4349-8902-48e058169b4c";
+      uuid = "42af25f1-6b2e-4349-8902-48e058169b4c";
       flow = "xtls-rprx-vision";
       tls = {
         enabled = true;

@@ -13,10 +13,8 @@
   spacing = 0;
   margin-bottom = 5;
   modules-left = [
-    "custom/weather"
-    "custom/cmus"
-    "custom/foot"
-    "custom/nemo"
+    "battery"
+    "bluetooth"
   ];
   modules-center = [
     "hyprland/workspaces"
@@ -33,27 +31,34 @@
     exec = "~/.config/hypr/themes/hypr_strws/weather.sh";
     tooltip = false;
   };
-  "custom/cmus" = {
-    format = "{icon} CMUS";
-    format-icons = {
-      default = [
-        ""
-      ];
-    };
-    max-length = 15;
-    interval = 1;
-    exec = "cmus-remote -C \"format_print '%F'\"";
-    exec-if = "pgrep cmus";
-    on-click = "cmus-remote -u";
-    on-scroll-up = "cmus-remote --next";
-    on-scroll-down = "cmus-remote --prev";
-    escape = true;
-    tooltip = false;
-  };
   "custom/foot" = {
     format = "";
     on-click = "exec foot --title=home -c ~/.config/hypr/themes/hypr_strws/foot.ini";
     tooltip = false;
+  };
+  battery = {
+    states = {
+      warning = 30;
+      critical = 15;
+    };
+    format = "{icon}";
+    format-full = "{icon}";
+    format-charging = " ";
+    format-plugged = " ";
+    format-alt = "{time}";
+    format-icons = ["" "" "" "" ""];
+    tooltip-format = "{capacity}%";
+  };
+  bluetooth = {
+    format-disabled = "󰂯";
+    format-connected = "󰂯";
+    format-off = "󰂯";
+    format-on = "󰂯";
+    format-connected-battery = "󰂯";
+    tooltip-format-connected = "{device_enumerate}";
+    tooltip-format-enumerate-connected = "{device_alias} 󰂄{device_battery_percentage}% {device_address}";
+    on-click = "blueman-manager";
+    tooltip = true;
   };
   "custom/nemo" = {
     format = "󰉋";
@@ -81,7 +86,7 @@
     spacing = 15;
   };
   pulseaudio = {
-    scroll-step = 5;
+    scroll-step = 1;
     format = "{icon}{volume}%";
     format-icons = {
       default = [

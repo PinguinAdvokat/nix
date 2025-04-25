@@ -115,3 +115,28 @@ window#waybar {
 	border-radius: 0 6 6 0;
 	font-size: 14px;
 }
+
+#battery {
+	background: @black;
+	color: @fg;
+	padding: 0 10px 0 10px;
+	margin: 4px 0 4px 10px;
+	border-radius: 6 0 0 6;
+}
+
+#bluetooth {
+	background: @black;
+	padding: 0 10px 0 10px;
+	margin: 4px 0 4px 0;
+	border-radius: 0 6 6 0;
+}
+#bluetooth.off {
+	color: #adadad;
+}
+#bluetooth.on {
+	color: @fg;
+}
+#bluetooth.connected {
+	color: @green;
+	border-bottom: solid 2px @green;
+}

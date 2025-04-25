@@ -7,6 +7,8 @@
     telegram-desktop
 
     # CLI
+    cava
+    btop
 
     # coding stuff
 

@@ -6,7 +6,10 @@
 		./wofi/default.nix
 		./waybar/default.nix
 		./swaync/default.nix
-		./gtk.nix
+		./theme.nix
 		./firefox.nix
+                ./zsh.nix
+		./mako.nix
+		./zed.nix
 	];
 }

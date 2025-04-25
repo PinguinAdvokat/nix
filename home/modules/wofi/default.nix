@@ -2,12 +2,19 @@
   programs.wofi = {
     enable = true;
     settings = {
-      allow_markup = true;
+      width = 500;
+      height = 220;
+      x = 550;
+      y = 630;
+      columns = 2;
+      hide_scroll = true;
+      promt = "search";
+      term = "alacritty";
+      no_actions = true;
       allow_images = true;
-      width = 350;
-      height = 450;
+      image_size = 25;
     };
   };
 
-  home.file.".config/wofi/style.css".source = ./style.css;
+  home.file.".config/wofi/wofi.css".source = ./wofi.css;
 }
