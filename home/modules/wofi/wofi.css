@@ -28,7 +28,7 @@ window {
     padding: 15 0 0 0;
 }
 #outer-box {
-    margin: 20px;
+    margin: 10px;
     padding: 0px;
     background-color: @bg;
 }

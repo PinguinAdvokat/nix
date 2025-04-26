@@ -2,7 +2,7 @@
   programs.wofi = {
     enable = true;
     settings = {
-      width = 300;
+      width = 500;
       height = 220;
       x = 550;
       y = 630;
