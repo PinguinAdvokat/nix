@@ -27,6 +27,7 @@
         "systemctl --user start hyprpolkitagent"
         "gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3"
         "gsettings set org.gnome.desktop.interface color-scheme matcha-gtk-theme"
+        "waypaper --restore"
       ];
 
 
@@ -46,7 +47,7 @@
         blur = {
           enabled = true;
           size = 8;
-          passes = 1;
+          passes = 3;
           new_optimizations = true;
         };
 
@@ -118,6 +119,10 @@
         "float,^(.blueman-manager-wrapped)$"
         "size 537 321,^(.blueman-manager-wrapped)$"
         "move 128 540,^(.blueman-manager-wrapped)$"
+
+        "float,^(waypaper)$"
+        "size 772 541,^(waypaper)$"
+        "move 382 134,^(waypaper)$"
      ];
 
       windowrulev2 = [

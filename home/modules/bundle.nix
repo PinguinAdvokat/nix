@@ -7,7 +7,7 @@
 		./waybar/default.nix
 		./swaync/default.nix
 		./theme.nix
-		./firefox.nix
+		./firefox/default.nix
                 ./zsh.nix
 		./mako.nix
 		./zed.nix
