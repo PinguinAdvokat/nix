@@ -13,6 +13,7 @@
       no_actions = true;
       allow_images = true;
       image_size = 25;
+      normal_window = true;
     };
   };
 

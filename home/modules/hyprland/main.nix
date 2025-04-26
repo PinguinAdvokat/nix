@@ -21,8 +21,9 @@
 
       exec-once = [
         "waybar"
-        "wl-paste --type text --watch cliphist store"
-        "wl-paste --type image --watch cliphist store"
+        "wl-clipboard-history -t"
+        "wl-paste --watch cliphist store"
+        "wl-clip-persist --clipboard regular"
         "hyprctl setcursor Bibata-Modern-Ice 22"
         "systemctl --user start hyprpolkitagent"
         "gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3"
@@ -123,6 +124,8 @@
         "float,^(waypaper)$"
         "size 772 541,^(waypaper)$"
         "move 382 134,^(waypaper)$"
+  
+        "move 550 630,^(wofi)$"
      ];
 
       windowrulev2 = [

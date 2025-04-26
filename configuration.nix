@@ -110,6 +110,8 @@
      go
      waypaper
      swww
+     wl-clipboard
+     wl-clip-persist
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
