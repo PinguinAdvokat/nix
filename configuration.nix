@@ -112,6 +112,9 @@
      swww
      wl-clipboard
      wl-clip-persist
+     python3
+     pipx
+     kdiskmark
    ];
 
   # Some programs need SUID wrappers, can be configured further or are

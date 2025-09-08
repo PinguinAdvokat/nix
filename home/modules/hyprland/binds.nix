@@ -36,6 +36,7 @@ in {
       "$mainMod,       N, exec, swaync-client -t"
       ", Print, exec, grimblast --notify --freeze copysave area"
       "$mainMod,       W, exec, ${booksScript}/bin/open_books"
+      "$mainMod SHIFT, S, exec, grim -g \"$(slurp)\" - | swappy -f -"
 
       # Moving focus
       "$mainMod, left, movefocus, l"

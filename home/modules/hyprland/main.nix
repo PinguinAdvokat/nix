@@ -126,6 +126,9 @@
         "move 382 134,^(waypaper)$"
   
         "move 550 630,^(wofi)$"
+
+        "float,^(YandexMusic)$"
+        "size 466 739,^(YandexMusic)$"
      ];
 
       windowrulev2 = [
