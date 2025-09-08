@@ -1,1 +1,2 @@
 ./flake_modules/singbox.nix
+./home/modules/git.nix

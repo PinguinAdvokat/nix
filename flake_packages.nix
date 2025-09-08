@@ -1,5 +1,4 @@
-{
-
+{ pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     vim
     wget
@@ -23,5 +22,4 @@
     pipx
     kdiskmark
    ];
-
 }
