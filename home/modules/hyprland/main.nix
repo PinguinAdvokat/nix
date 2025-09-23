@@ -16,7 +16,7 @@
       monitor = ",1600x900@60,auto,1";
       "$mainMod" = "SUPER";
       "$terminal" = "alacritty";
-      "$fileManager" = "nemo";
+      "$fileManager" = "nautilus";
       "$menu" = "wofi";
 
       exec-once = [
@@ -97,38 +97,36 @@
         force_default_wallpaper = 0;
         disable_hyprland_logo = true;
       };
-      
+
       windowrule = [
         #programs rules
-        "float,^(hiddify)$"
-        "size 500 700,^(hiddify)$"
 
-        "size 650 450,^(Alacritty)$"
-        "float,^(Alacritty)$"
+        "size 650 450, class:Alacritty"
+        "float, class:Alacritty"
 
-        "float,^(nemo)$"
+        "float, class:nemo"
 
-        "float,^(org.telegram.desktop)$"
-	"size 400 600,^(org.telegram.desktop)$"
+        "float,class:org.telegram.desktop"
+	"size 400 600,class:org.telegram.desktop"
 
-        "float,^(org.pulseaudio.pavucontrol)$"
-        "size 468 284,^(org.pulseaudio.pavucontrol)$"
-        "move 835 576,^(org.pulseaudio.pavucontrol)$"
-  
+        "float,class:org.pulseaudio.pavucontrol"
+        "size 468 284,class:org.pulseaudio.pavucontrol"
+        "move 835 576,class:org.pulseaudio.pavucontrol"
+
         "float, title:Картинка в картинке"
 
-        "float,^(.blueman-manager-wrapped)$"
-        "size 537 321,^(.blueman-manager-wrapped)$"
-        "move 128 540,^(.blueman-manager-wrapped)$"
+        "float,class:.blueman-manager-wrapped"
+        "size 537 321,class:.blueman-manager-wrapped"
+        "move 128 540,class:.blueman-manager-wrapped"
 
-        "float,^(waypaper)$"
-        "size 772 541,^(waypaper)$"
-        "move 382 134,^(waypaper)$"
-  
-        "move 550 630,^(wofi)$"
+        "float,class:waypaper"
+        "size 772 541,class:waypaper"
+        "move 382 134,class:waypaper"
 
-        "float,^(YandexMusic)$"
-        "size 466 739,^(YandexMusic)$"
+        "move 550 630,class:wofi"
+
+        "float,class:YandexMusic"
+        "size 466 739,class:YandexMusic"
      ];
 
       windowrulev2 = [
@@ -142,12 +140,12 @@
         "suppressevent maximize, class:.*"
         "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
 
-        "opacity 0.0 override, class:^(xwaylandvideobridge)$"
-        "noanim, class:^(xwaylandvideobridge)$"
-        "noinitialfocus, class:^(xwaylandvideobridge)$"
-        "maxsize 1 1, class:^(xwaylandvideobridge)$"
-        "noblur, class:^(xwaylandvideobridge)$"
-        "nofocus, class:^(xwaylandvideobridge)$"
+        "opacity 0.0 override, class:class:xwaylandvideobridge"
+        "noanim, class:class:xwaylandvideobridge"
+        "noinitialfocus, class:class:xwaylandvideobridge"
+        "maxsize 1 1, class:class:xwaylandvideobridge"
+        "noblur, class:class:xwaylandvideobridge"
+        "nofocus, class:class:xwaylandvideobridge"
       ];
 
     };

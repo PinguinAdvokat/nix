@@ -10,6 +10,6 @@
 		./firefox/default.nix
                 ./zsh.nix
 		./mako.nix
-		./zed.nix
+		#./zed.nix
 	];
 }

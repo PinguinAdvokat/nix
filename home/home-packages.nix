@@ -6,9 +6,12 @@
     nemo
     nautilus
     telegram-desktop
-    yandex-music
+    #yandex-music
     spotify
-    libreoffice  
+    zed-editor
+    libreoffice
+    obs-studio
+    v2rayn  
 
     # CLI
     cava

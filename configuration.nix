@@ -91,7 +91,7 @@
      font-awesome
      jetbrains-mono
      inter
-     nerdfonts
+     nerd-fonts.droid-sans-mono
    ];
    environment.shells = with pkgs; [ zsh ];
   # Some programs need SUID wrappers, can be configured further or are

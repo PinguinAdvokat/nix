@@ -6,7 +6,7 @@
     kitty
     firefox
     home-manager
-    chromium
+    #chromium
     neofetch
     pfetch
     pavucontrol
@@ -21,5 +21,6 @@
     python3
     pipx
     kdiskmark
+    mpvpaper
    ];
 }
