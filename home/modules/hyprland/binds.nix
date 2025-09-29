@@ -24,6 +24,7 @@ in {
       "$mainMod SHIFT, M, exit,"
       "$mainMod,       E, exec, $fileManager"
       "$mainMod,       F, togglefloating,"
+      "$mainMod,       C, fullscreen,"
       "$mainMod,       D, exec, $menu --show drun"
       "$mainMod,       P, pin,"
       "$mainMod,       J, togglesplit,"

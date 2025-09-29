@@ -11,7 +11,8 @@
     zed-editor
     libreoffice
     obs-studio
-    v2rayn  
+    v2rayn
+    hiddify-app  
 
     # CLI
     cava
