@@ -20,7 +20,7 @@
       "$menu" = "wofi";
 
       exec-once = [
-        "waybar"
+        #"waybar"
         "wl-clipboard-history -t"
         "wl-paste --watch cliphist store"
         "wl-clip-persist --clipboard regular"
