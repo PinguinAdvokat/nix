@@ -12,7 +12,7 @@
     libreoffice
     obs-studio
     v2rayn
-    hiddify-app  
+    hiddify-app
 
     # CLI
     cava

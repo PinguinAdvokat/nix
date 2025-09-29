@@ -11,6 +11,7 @@
                 ./zsh.nix
 		./mako.nix
                 ./kitty.nix
+                ./amnezia.nix
 		#./zed.nix
 	];
 }

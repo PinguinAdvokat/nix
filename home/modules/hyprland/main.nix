@@ -15,12 +15,12 @@
 
       monitor = ",1600x900@60,auto,1";
       "$mainMod" = "SUPER";
-      "$terminal" = "alacritty";
+      "$terminal" = "kitty";
       "$fileManager" = "nautilus";
       "$menu" = "wofi";
 
       exec-once = [
-        "hyprpanel"
+        "waybar"
         "wl-clipboard-history -t"
         "wl-paste --watch cliphist store"
         "wl-clip-persist --clipboard regular"
@@ -101,8 +101,8 @@
       windowrule = [
         #programs rules
 
-        "size 650 450, class:Alacritty"
-        "float, class:Alacritty"
+        "size 650 450, class:Kitty"
+        "float, class:Kitty"
 
         "float, class:nemo"
 
