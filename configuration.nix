@@ -85,6 +85,7 @@
   programs.hyprland.enable = true;
   programs.zsh.enable = true;
   networking.networkmanager.enable = true;
+  programs.amnezia-vpn.enable = true;
   # List packages installed in system profile. To search, run:
   # $ nix search wget
    fonts.packages = with pkgs; [ 

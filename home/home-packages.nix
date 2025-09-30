@@ -3,22 +3,18 @@
 
   home.packages = with pkgs; [
     # desktop
-    nemo
     nautilus
     telegram-desktop
-    #yandex-music
     spotify
-    zed-editor
-    libreoffice
+    onlyoffice-desktopeditors
     obs-studio
-    v2rayn
-    hiddify-app
 
     # CLI
     cava
     btop
 
     # coding stuff
+    zed-editor
 
     # WM stuff
     xdg-desktop-portal-gtk

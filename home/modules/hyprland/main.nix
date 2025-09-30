@@ -101,8 +101,8 @@
       windowrule = [
         #programs rules
 
-        "size 650 450, class:Kitty"
-        "float, class:Kitty"
+        "size 650 450, class:kitty"
+        "float, class:kitty"
 
         "float, class:nemo"
 
