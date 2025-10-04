@@ -104,7 +104,7 @@
         "size 650 450, class:kitty"
         "float, class:kitty"
 
-        "float, class:nemo"
+        "float, class:org.gnome.Nautilus"
 
         "float,class:org.telegram.desktop"
 	"size 400 600,class:org.telegram.desktop"
