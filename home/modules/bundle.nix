@@ -7,6 +7,5 @@
 		./theme.nix
                 ./zsh.nix
                 ./kitty.nix
-                ./steam.nix
 	];
 }

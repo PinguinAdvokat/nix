@@ -22,5 +22,6 @@
     pipx
     kdiskmark
     mpvpaper
+    protonup-qt
    ];
 }
