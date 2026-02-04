@@ -2,7 +2,7 @@
 
 {
   services.sing-box = {
-    enable = true;
+    enable = false;
     settings = {
       inbounds = [
     {
