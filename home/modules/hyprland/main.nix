@@ -13,7 +13,10 @@
         "XDG_SCREENSHOTS_DIR,$HOME/screens"
       ];
 
-      monitor = ",1920x1080@60,auto,1";
+      monitor = [
+        "HDMI-A-2, 1600x900@60, 0x90, 1"
+        "HDMI-A-1, 1920x1080@60, 1600x0, 1"
+      ];
       "$mainMod" = "SUPER";
       "$terminal" = "alacritty";
       "$fileManager" = "nautilus";
@@ -123,7 +126,7 @@
         "size 772 541,class:waypaper"
         "move 382 134,class:waypaper"
 
-        "move 550 630,class:wofi"
+        "move 500 500,class:wofi"
 
         "float,class:YandexMusic"
         "size 466 739,class:YandexMusic"
