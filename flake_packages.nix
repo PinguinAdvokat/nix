@@ -22,5 +22,7 @@
     pipx
     kdiskmark
     mpvpaper
+    hiddify-app
+    steam
    ];
 }
