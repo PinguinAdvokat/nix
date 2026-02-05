@@ -23,6 +23,5 @@
     kdiskmark
     mpvpaper
     hiddify-app
-    steam
    ];
 }

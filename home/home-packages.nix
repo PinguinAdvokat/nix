@@ -11,6 +11,7 @@
     zed-editor
     libreoffice
     obs-studio
+    steam
 
     # CLI
     cava
@@ -24,5 +25,6 @@
     grim
     slurp
     swappy
+    hyprsome
   ];
 }

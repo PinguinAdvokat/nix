@@ -10,6 +10,7 @@
 		./firefox/default.nix
                 ./zsh.nix
 		./mako.nix
+                #./hyprpanel.nix
 		#./zed.nix
 	];
 }

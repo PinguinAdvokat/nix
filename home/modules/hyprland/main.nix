@@ -14,13 +14,38 @@
       ];
 
       monitor = [
-        "HDMI-A-2, 1600x900@60, 0x90, 1"
         "HDMI-A-1, 1920x1080@60, 1600x0, 1"
+        "HDMI-A-2, 1600x900@60, 0x90, 1"
       ];
       "$mainMod" = "SUPER";
       "$terminal" = "alacritty";
       "$fileManager" = "nautilus";
       "$menu" = "wofi";
+      "$mon_main" = "HDMI-A-1";
+      "$mon_sec" = "HDMI-A-2";
+
+      workspace = [
+        "1,monitor:$mon_main"
+        "2,monitor:$mon_main"
+        "3,monitor:$mon_main"
+        "4,monitor:$mon_main"
+        "5,monitor:$mon_main"
+        "6,monitor:$mon_main"
+        "7,monitor:$mon_main"
+        "8,monitor:$mon_main"
+        "9,monitor:$mon_main"
+        "10,monitor:$mon_main"
+        "11,monitor:$mon_sec"
+        "12,monitor:$mon_sec"
+        "13,monitor:$mon_sec"
+        "14,monitor:$mon_sec"
+        "15,monitor:$mon_sec"
+        "16,monitor:$mon_sec"
+        "17,monitor:$mon_sec"
+        "18,monitor:$mon_sec"
+        "19,monitor:$mon_sec"
+        "110,monitor:$mon_sec"
+      ];
 
       exec-once = [
         "waybar"
