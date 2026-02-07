@@ -22,6 +22,5 @@
     pipx
     kdiskmark
     mpvpaper
-    hiddify-app
    ];
 }

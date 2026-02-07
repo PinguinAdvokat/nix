@@ -48,7 +48,6 @@
       ];
 
       exec-once = [
-        "waybar"
         "wl-clipboard-history -t"
         "wl-paste --watch cliphist store"
         "wl-clip-persist --clipboard regular"
@@ -105,7 +104,6 @@
       };
 
       gestures = {
-        workspace_swipe = true;
         workspace_swipe_invert = true;
         workspace_swipe_forever	= true;
       };

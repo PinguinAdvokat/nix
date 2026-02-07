@@ -8,7 +8,6 @@
     telegram-desktop
     #yandex-music
     spotify
-    zed-editor
     libreoffice
     obs-studio
     steam
@@ -18,6 +17,7 @@
     btop
 
     # coding stuff
+    vscode
 
     # WM stuff
     xdg-desktop-portal-gtk

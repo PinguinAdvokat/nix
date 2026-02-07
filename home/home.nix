@@ -2,7 +2,7 @@
 	home = {
 		username = "pinguin";
 		homeDirectory = "/home/pinguin";
-		stateVersion = "25.05";
+		stateVersion = "25.11";
 	};
 	
 	imports = [
