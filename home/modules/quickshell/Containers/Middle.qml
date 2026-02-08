@@ -24,6 +24,7 @@ Item {
                 text: "󰫍"
                 color: isActive ? Dat.Colors.colActive : Dat.Colors.colInActive
                 font { family: Dat.Fonts.fontFamily; pixelSize: Dat.Fonts.fontSize + 10; bold: true }
+                Behavior on color { ColorAnimation { duration: 200 } }
                 MouseArea {
                     anchors.fill: parent
                     onClicked: Hyprland.dispatch("workspace " + (index + 1))

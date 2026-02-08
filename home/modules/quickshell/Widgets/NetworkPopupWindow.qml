@@ -39,13 +39,13 @@ PanelWindow {
     screen: Quickshell.screens[0]
     
     anchors {
-        top: true
+        bottom: true
         right: true
     }
     
     margins {
         right: 12
-        top: 12
+        bottom: 12
     }
     
     implicitWidth: 340
@@ -415,41 +415,6 @@ PanelWindow {
                             font.pixelSize: 12
                             color: cSubText
                         }
-                    }
-                }
-                
-                // Settings button
-                Rectangle {
-                    Layout.fillWidth: true
-                    Layout.preferredHeight: 36
-                    radius: 10
-                    color: settingsArea.containsMouse ? cHover : "transparent"
-                    
-                    RowLayout {
-                        anchors.centerIn: parent
-                        spacing: 6
-                        
-                        Text {
-                            text: "󰒓"
-                            font.family: "Material Design Icons"
-                            font.pixelSize: 14
-                            color: cSubText
-                        }
-                        
-                        Text {
-                            text: "Network Settings"
-                            font.family: "Inter"
-                            font.pixelSize: 12
-                            color: cSubText
-                        }
-                    }
-                    
-                    MouseArea {
-                        id: settingsArea
-                        anchors.fill: parent
-                        hoverEnabled: true
-                        cursorShape: Qt.PointingHandCursor
-                        onClicked: settingsProcess.running = true
                     }
                 }
             }

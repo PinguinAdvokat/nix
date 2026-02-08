@@ -383,6 +383,8 @@ BasePill {
                         visible: root.playerAvailable
                         opacity: activePlayer ? 1 : 0.3
 
+                        Behavior on color { ColorAnimation { duration: 150 } }
+
                         DankIcon {
                             anchors.centerIn: parent
                             name: activePlayer && activePlayer.playbackState === 1 ? "pause" : "play_arrow"

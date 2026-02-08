@@ -7,7 +7,10 @@ import "../Data/" as Dat
 import "../Generics/" as Gen
 
 Row {
-    id: rightPills
+    id: root
+
+    property var bluetoothPopup
+    property var networkPopup: NetworkPopupWindow {}
     spacing: 6
     
     // ═══ PILL 1: Network + Bluetooth (Connectivity) ═══
@@ -55,8 +58,8 @@ Row {
                 Binding {
                     target: networkLoader.item
                     property: "barWindow"
-                    value: root.barWindow
-                    when: networkLoader.status === Loader.Ready && root.barWindow !== undefined
+                    value: connectivityPill
+                    when: networkLoader.status === Loader.Ready
                     restoreMode: Binding.RestoreBinding
                 }
                 
