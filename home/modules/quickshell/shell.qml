@@ -1,54 +1,55 @@
-//@ pragma UseQApplication
 import Quickshell
-import Quickshell.Wayland
-import Quickshell.Io
-import Quickshell.Hyprland
 import QtQuick
 import QtQuick.Layouts
+import Quickshell.Hyprland
+import Quickshell.Services.Pipewire
+import Quickshell.Widgets
+
+import qs.Widgets
+
+import "./Data" as Dat
+import "./Containers" as Con
+import "./Modules/OSD/" as OSD
 
 PanelWindow {
-    id: root
+  id: root
 
-    // Theme
-    property color colBg: "#1a1b26"
-    property color colFg: "#a9b1d6"
-    property color colMuted: "#444b6a"
-    property color colCyan: "#0db9d7"
-    property color colBlue: "#7aa2f7"
-    property color colYellow: "#e0af68"
-    property string fontFamily: "JetBrainsMono Nerd Font"
-    property int fontSize: 14
+  anchors.bottom: true
+  implicitHeight: 35
+  width: 1100
+  color: "transparent"
 
-    // System data
-    property int cpuUsage: 0
-    property int memUsage: 0
-    property var lastCpuIdle: 0
-    property var lastCpuTotal: 0
+  OSD.VolumeOSD {}
 
-    // Processes and timers here...
+  Rectangle {
+    anchors.fill: parent
+    radius: 15
+    color: Dat.Colors.colBG
 
-    anchors.bottom: true
-    width: 900
-    implicitHeight: 30
-    color: root.colBg
+    Item {
+      id: base
 
-    Rectangle {
-      id: bar
-      color: root.colBg
-      radius: 20
+      anchors.fill: parent
+      anchors.margins: 4
 
       RowLayout {
         anchors.fill: parent
-        anchors.margins: 8
-        spacing: 8
-        Text {
-          text: "penis"
-          color: "#ffffff"
+
+        Con.Left {
+          Layout.fillHeight: true
+          Layout.fillWidth: true
         }
-        Text {
-          text: "penis"
-          color: "#ffffff"
+
+        Con.Middle {
+          Layout.fillHeight: true
+          Layout.fillWidth: true
+        }
+
+        Con.Right {
+          Layout.fillHeight: true
+          Layout.fillWidth: true
         }
       }
     }
+  }
 }
