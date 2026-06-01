@@ -1,4 +1,5 @@
 import QtQuick
+import Quickshell
 import QtQuick.Layouts
 import Quickshell.Hyprland
 import "../Widgets/" as Wid
@@ -22,6 +23,7 @@ Item {
                 property bool isActive: Hyprland.focusedWorkspace?.id === (index + 1)
                 anchors.verticalCenter: parent.verticalCenter
                 text: "󰫍"
+                renderType: Text.NativeRendering
                 color: isActive ? Dat.Colors.colActive : Dat.Colors.colInActive
                 font { family: Dat.Fonts.fontFamily; pixelSize: Dat.Fonts.fontSize + 10; bold: true }
                 Behavior on color { ColorAnimation { duration: 200 } }

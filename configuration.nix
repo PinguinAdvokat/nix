@@ -60,6 +60,7 @@
   # Enable sound.
    hardware.pulseaudio.enable = false;
    services.xserver.videoDrivers = [ "amdgpu" ];
+  hardware.bluetooth.enable = true;
   hardware.graphics = {
     enable = true;
     enable32Bit = true;        # важно для игр из Steam
@@ -74,7 +75,11 @@
     enable = true;
     driSupport32Bit = true;
   };
-   services.displayManager.ly.enable = true;
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "pinguin" ];  # замените на ваше имя пользователя
+  services.displayManager.ly.enable = true;
+  services.gvfs.enable = true;
+  services.udisks2.enable = true;
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
@@ -90,7 +95,10 @@
   security.polkit.enable = true;
   nixpkgs.config.allowUnfree = true; 
   nix.settings.experimental-features = ["nix-command" "flakes"];
-  # programs.firefox.enable = true;
+
+  qt.enable = true;
+  qt.platformTheme = "kde";
+  qt.style = "adwaita";
   programs.hyprland.enable = true;
   programs.zsh.enable = true;
   programs.nekoray = {
@@ -98,6 +106,7 @@
     tunMode.enable = true;
     tunMode.setuid = true;
   };
+  programs.nix-ld.enable = true;
   networking.networkmanager.enable = true;
   # List packages installed in system profile. To search, run:
   # $ nix search wget

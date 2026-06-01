@@ -9,15 +9,24 @@
 			url = "github:nix-community/home-manager/release-25.11";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		caelestia-shell = {
+			url = "github:caelestia-dots/shell";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 	};
 
-	outputs = { nixpkgs, home-manager, ... }:
+	outputs = { self, nixpkgs, caelestia-shell, home-manager, ... }:
 		let
 			system = "x86_64-linux";
 		in {
 		nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 			inherit system;
-			modules = [ ./configuration.nix ]; 
+			specialArgs = {
+				inherit caelestia-shell;
+			};
+			modules = [
+                		./configuration.nix
+			]; 
 		};
 		
 		homeConfigurations.pinguin = home-manager.lib.homeManagerConfiguration {

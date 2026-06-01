@@ -3,14 +3,22 @@
 
   home.packages = with pkgs; [
     # desktop
-    nemo
-    nautilus
+    mission-center
+    nmap
+    unrar
+    packwiz
+    shotcut
+    prismlauncher
+    openvpn
     telegram-desktop
-    #yandex-music
+    unzip
     spotify
     libreoffice
     obs-studio
     steam
+    mpv
+    postman
+    qbittorrent
 
     # CLI
     cava
@@ -26,5 +34,6 @@
     slurp
     swappy
     hyprsome
+    blueman
   ];
 }

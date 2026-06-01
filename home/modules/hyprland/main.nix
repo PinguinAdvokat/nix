@@ -19,7 +19,7 @@
       ];
       "$mainMod" = "SUPER";
       "$terminal" = "alacritty";
-      "$fileManager" = "nautilus";
+      "$fileManager" = "nemo";
       "$menu" = "wofi";
       "$mon_main" = "HDMI-A-1";
       "$mon_sec" = "HDMI-A-2";
@@ -56,6 +56,7 @@
         "gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3"
         "gsettings set org.gnome.desktop.interface color-scheme matcha-gtk-theme"
         "waypaper --restore"
+        "Throne"
       ];
 
 
@@ -153,6 +154,8 @@
 
         "float,class:YandexMusic"
         "size 466 739,class:YandexMusic"
+	"float, class:io.missioncenter.MissionCenter"
+	"size 650 450, class:io.missioncenter.MissionCenter"
      ];
 
       windowrulev2 = [

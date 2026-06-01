@@ -7,7 +7,7 @@
 
     shellAliases = {
       flake = "sudo nixos-rebuild switch --flake ~/nix/";
-      home-flake = "home-manager switch --flake ~/nix/";
+      home-flake = "home-manager switch --impure --flake ~/nix/";
     };
  
     oh-my-zsh = {

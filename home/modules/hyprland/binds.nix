@@ -38,6 +38,8 @@ in {
       ", Print, exec, grimblast --notify --freeze copysave area"
       "$mainMod,       W, exec, ${booksScript}/bin/open_books"
       "$mainMod SHIFT, S, exec, grim -g \"$(slurp)\" - | swappy -f -"
+      "CTRL SHIFT, ESCAPE, exec, missioncenter"
+
 
       # Moving focus
       "$mainMod, left, movefocus, l"
@@ -84,6 +86,10 @@ in {
       # Scratchpad
       "$mainMod,       S, togglespecialworkspace,  magic"
       "$mainMod SHIFT, S, movetoworkspace, special:magic"
+
+      # Global
+      "CTRL SHIFT, M, pass, class:^(discord|discord-stable)$"
+      "CTRL SHIFT, N, pass, class:^(discord|discord-stable)$"
     ];
 
     # Move/resize windows with mainMod + LMB/RMB and dragging

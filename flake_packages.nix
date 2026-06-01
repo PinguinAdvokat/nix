@@ -1,5 +1,14 @@
-{ pkgs, ... }: {
+{ pkgs, caelestia-shell, ... }: {
   environment.systemPackages = with pkgs; [
+    clash-verge-rev
+    file
+    musl
+    dig
+    net-tools
+    adwaita-qt6
+    gcc
+    nemo
+    kdePackages.dolphin
     vim
     wget
     git
@@ -23,5 +32,8 @@
     kdiskmark
     mpvpaper
     bluez
+    easyeffects
+   ] ++ [
+    caelestia-shell.packages."x86_64-linux".default
    ];
 }
