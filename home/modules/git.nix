@@ -1,7 +1,7 @@
 {
   programs.git = {
     enable = true;
-    userName = "PinguinAdvokat";
-    userEmail = "pinguin.advokat@mail.ru";
+    user.name = "PinguinAdvokat";
+    user.email = "pinguin.advokat@mail.ru";
   };
 }
