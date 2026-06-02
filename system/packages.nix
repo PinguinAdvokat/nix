@@ -23,8 +23,6 @@
     discord
     wireplumber
     go
-    waypaper
-    swww
     wl-clipboard
     wl-clip-persist
     python3
@@ -33,7 +31,5 @@
     mpvpaper
     bluez
     easyeffects
-   ] ++ [
-    caelestia-shell.packages."x86_64-linux".default
    ];
 }

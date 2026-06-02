@@ -1,22 +1,23 @@
-{ pkgs, ... }: {
-  home.packages = with pkgs; [
-    quickshell
-  ];
-
-  # Optional: Configure quickshell to start automatically
-  # systemd.user.services.quickshell = {
-  #   Unit = {
-  #     Description = "Quickshell";
-  #     After = [ "graphical-session-pre.target" ];
-  #     PartOf = [ "graphical-session.target" ];
-  #   };
-  #   Service = {
-  #     Type = "simple";
-  #     ExecStart = "${pkgs.quickshell}/bin/qs";
-  #     Restart = "on-failure";
-  #   };
-  #   Install = {
-  #     WantedBy = [ "graphical-session.target" ];
-  #   };
-  # };
+{ config, pkgs, ... }: {
+  programs.caelestia = {
+    enable = true;
+    systemd = {
+      enable = true;
+      target = "graphical-session.target";
+      environment = [];
+    };
+    settings = {
+      bar.status = {
+        showBattery = false;
+        showAudio = true;
+      };
+      paths.wallpaperDir = "~/wallpapers";
+    };
+    cli = {
+      enable = true; # Also add caelestia-cli to path
+      settings = {
+        theme.enableGtk = false;
+      };
+    };
+  };
 }

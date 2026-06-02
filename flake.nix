@@ -9,10 +9,8 @@
 			url = "github:nix-community/home-manager/release-25.11";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-		caelestia-shell = {
-			url = "github:caelestia-dots/shell";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
+		caelestia-shell.url = "github:caelestia-dots/shell";
+		caelestia-shell.inputs.nixpkgs.follows = "nixpkgs";
 	};
 
 	outputs = { self, nixpkgs, caelestia-shell, home-manager, ... }:
@@ -25,13 +23,17 @@
 				inherit caelestia-shell;
 			};
 			modules = [
-                		./configuration.nix
+                ./configuration.nix
 			]; 
 		};
 		
 		homeConfigurations.pinguin = home-manager.lib.homeManagerConfiguration {
 			pkgs = nixpkgs.legacyPackages.${system};
-			modules = [ ./home/home.nix ];
+			modules = [
+				./home/home.nix
+
+				caelestia-shell.homeManagerModules.default
+			];
 		};
 	};
 

@@ -25,7 +25,7 @@ in {
       "$mainMod,       E, exec, $fileManager"
       "$mainMod,       F, togglefloating,"
       "$mainMod,       C, fullscreen,"
-      "$mainMod,       D, exec, $menu --show drun"
+      "$mainMod,       D, global, caelestia:launcher"
       "$mainMod,       P, pin,"
       "$mainMod,       J, togglesplit,"
       "$mainMod,       M, exec, bemoji -cn"
