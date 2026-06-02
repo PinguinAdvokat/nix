@@ -6,7 +6,7 @@
 	};
 	
 	imports = [
-		./modules/bundle.nix
-		./home-packages.nix
+		./packages.nix
+		./modules
 	];
 }
