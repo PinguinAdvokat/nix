@@ -3,7 +3,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 {
   imports =
@@ -20,6 +20,14 @@
   environment.shells = with pkgs; [ zsh ];
 
   networking.firewall.enable = false;
+
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    extraSpecialArgs = { inherit inputs; };
+    users.pinguin = import ./home/home.nix;
+  };
+
   system.stateVersion = "26.05";
 }
 

@@ -1,8 +1,21 @@
 { pkgs, ... }: {
+  dconf = {
+    enable = true;
+    settings = {
+      "org/gnome/desktop/interface" = {
+        color-scheme = "prefer-dark";
+        gtk-theme = "Adwaita-dark";
+      };
+    };
+  };
+
   qt = {
     enable = true;
-    platformTheme.name = "gtk";
+    style = {
+      name = "adwaita-dark";
+    };
   };
+
   gtk = {
     enable = true;
     cursorTheme = {
@@ -18,12 +31,8 @@
       name = "Papirus-Dark";
     };
     theme = {
-      name = "catppuccin-macchiato-mauve-compact";
-      package = pkgs.catppuccin-gtk.override {
-        accents = ["mauve"];
-        variant = "macchiato";
-        size = "compact";
-      };
+      name = "Adwaita-dark";
+      package = pkgs.gnome-themes-extra;
     };
     gtk3.extraConfig = {
       Settings = ''

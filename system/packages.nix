@@ -6,26 +6,18 @@
     net-tools
     adwaita-qt6
     gcc
-    nemo
-    kdePackages.dolphin
     vim
     wget
     git
-    kitty
-    firefox
-    home-manager
     fastfetch
     pfetch
     pavucontrol
     hyprpolkitagent
-    discord
     wireplumber
     go
     wl-clipboard
     wl-clip-persist
     python3
-    kdiskmark
-    mpvpaper
     bluez
     easyeffects
    ];

@@ -60,8 +60,6 @@
         gaps_in = 5;
         gaps_out = 10;
         border_size = 0;
-        "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-        "col.inactive_border" = "rgba(595959aa)";
 
         layout = "dwindle";
       };
@@ -122,6 +120,8 @@
         "match:class Alacritty, size 650 450, float on"
 
         "match:class nemo, float on"
+
+        "match:class swayimg, float on"
 
         "match:class org.telegram.desktop, float on, size 400 600"
 

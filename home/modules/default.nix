@@ -5,12 +5,13 @@
     ./firefox.nix
     ./git.nix
     ./mako.nix
-    ./theme.nix
+    #./theme.nix
     ./zed.nix
     ./zsh.nix
     ./firefox
     ./hyprland
     ./swaync
     ./wofi
+    ./swayimg.nix
   ];
 }

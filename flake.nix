@@ -10,9 +10,10 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 		hyprland.url = "github:hyprwm/Hyprland/v0.55.0";
+		stylix.url = "github:nix-community/stylix/release-26.05";
 	};
 
-	outputs = { self, nixpkgs, home-manager, ... }@inputs:
+	outputs = { self, nixpkgs, ... }@inputs:
 		let
 			system = "x86_64-linux";
 			username = "pinguin";
@@ -20,13 +21,11 @@
 		nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 			inherit system;
 			specialArgs = { inherit inputs username system; };
-			modules = [ ./configuration.nix ]; 
-		};
-		
-		homeConfigurations.${username	} = home-manager.lib.homeManagerConfiguration {
-			pkgs = nixpkgs.legacyPackages.${system};
-			extraSpecialArgs = { inherit inputs username; };
-			modules = [ ./home/home.nix ];
+			modules = [ 
+				./configuration.nix
+				inputs.home-manager.nixosModules.default
+				inputs.stylix.nixosModules.stylix
+			];
 		};
 	};
 

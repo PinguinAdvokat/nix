@@ -17,6 +17,12 @@
     steam
     mpv
     qbittorrent
+    kdiskmark
+    discord
+    firefox
+    kitty
+    kdePackages.dolphin
+    nemo
 
     # CLI
     cava
@@ -32,5 +38,6 @@
     swappy
     hyprsome
     blueman
+    dconf
   ];
 }
