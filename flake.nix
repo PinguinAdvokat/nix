@@ -21,12 +21,11 @@
 		nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
 			inherit system;
 			specialArgs = { inherit inputs username system; };
-			modules = [ 
+			modules = [
 				./configuration.nix
 				inputs.home-manager.nixosModules.default
 				inputs.stylix.nixosModules.stylix
 			];
 		};
 	};
-
 }
