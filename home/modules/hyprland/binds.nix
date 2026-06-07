@@ -1,101 +1,84 @@
 { pkgs, ... }:
 let
-  booksDir = "$HOME/Downloads/books";
-  booksScript = pkgs.writeScriptBin "open_books" ''
-    #!/bin/sh
-
-    BOOKS_DIR="${booksDir}"
-
-    BOOK=$(find "$BOOKS_DIR" -type f \( -iname "*.pdf" -o -iname "*.epub" -o -iname "*.djvu" \) | wofi --dmenu --prompt "Select a book" --width 1200 --height 400)
-
-    if [[ -n "$BOOK" ]]; then
-        zathura "$BOOK" &
-    else
-        echo "No book selected."
-    fi
-  '';
+  mod = "SUPER";
 in {
-  home.packages = [ booksScript ];
-
   wayland.windowManager.hyprland.settings = {
     bind = [
-      "$mainMod,       T, exec, $terminal"
-      "$mainMod,       Q, killactive,"
-      "$mainMod SHIFT, M, exit,"
-      "$mainMod,       E, exec, $fileManager"
-      "$mainMod,       F, togglefloating,"
-      "$mainMod,       C, fullscreen,"
-      "$mainMod,       D, global, caelestia:launcher"
-      "$mainMod,       P, pin,"
-      "$mainMod,       J, togglesplit,"
-      "$mainMod,       M, exec, bemoji -cn"
-      "$mainMod,       V, exec, cliphist list | $menu --dmenu | cliphist decode | wl-copy"
-      "$mainMod,       B, exec, pkill -SIGUSR2 waybar"
-      "$mainMod SHIFT, B, exec, pkill -SIGUSR1 waybar"
-      "$mainMod,       L, exec, loginctl lock-session"
-      "$mainMod,       P, exec, hyprpicker -an"
-      "$mainMod,       N, exec, swaync-client -t"
+      "${mod},       T, exec, alacritty"
+      "${mod},       Q, killactive,"
+      "${mod} SHIFT, M, exit,"
+      "${mod},       E, exec, nemo"
+      "${mod},       F, togglefloating,"
+      "${mod},       C, fullscreen,"
+      "${mod},       D, exec, wofi --show drun"
+      "${mod},       P, pin,"
+      "${mod},       M, exec, bemoji -cn"
+      "${mod},       V, exec, cliphist list | $menu --dmenu | cliphist decode | wl-copy"
+      "${mod},       B, exec, pkill -SIGUSR2 waybar"
+      "${mod} SHIFT, B, exec, pkill -SIGUSR1 waybar"
+      "${mod},       L, exec, loginctl lock-session"
+      "${mod},       P, exec, hyprpicker -an"
+      "${mod},       N, exec, swaync-client -t"
       ", Print, exec, grimblast --notify --freeze copysave area"
-      "$mainMod,       W, exec, ${booksScript}/bin/open_books"
-      "$mainMod SHIFT, S, exec, grim -g \"$(slurp)\" - | swappy -f -"
+      "${mod} SHIFT, S, exec, grim -g \"$(slurp)\" - | swappy -f -"
       "CTRL SHIFT, ESCAPE, exec, missioncenter"
 
 
       # Moving focus
-      "$mainMod, left, movefocus, l"
-      "$mainMod, right, movefocus, r"
-      "$mainMod, up, movefocus, u"
-      "$mainMod, down, movefocus, d"
+      "${mod}, left, movefocus, l"
+      "${mod}, right, movefocus, r"
+      "${mod}, up, movefocus, u"
+      "${mod}, down, movefocus, d"
 
       # Moving windows
-      "$mainMod SHIFT, left,  swapwindow, l"
-      "$mainMod SHIFT, right, swapwindow, r"
-      "$mainMod SHIFT, up,    swapwindow, u"
-      "$mainMod SHIFT, down,  swapwindow, d"
+      "${mod} SHIFT, left,  swapwindow, l"
+      "${mod} SHIFT, right, swapwindow, r"
+      "${mod} SHIFT, up,    swapwindow, u"
+      "${mod} SHIFT, down,  swapwindow, d"
 
       # Resizeing windows                   X  Y
-      "$mainMod CTRL, left,  resizeactive, -60 0"
-      "$mainMod CTRL, right, resizeactive,  60 0"
-      "$mainMod CTRL, up,    resizeactive,  0 -60"
-      "$mainMod CTRL, down,  resizeactive,  0  60"
+      "${mod} CTRL, left,  resizeactive, -60 0"
+      "${mod} CTRL, right, resizeactive,  60 0"
+      "${mod} CTRL, up,    resizeactive,  0 -60"
+      "${mod} CTRL, down,  resizeactive,  0  60"
 
       # Switching workspaces
-      "$mainMod, 1, exec, hyprsome workspace 1"
-      "$mainMod, 2, exec, hyprsome workspace 2"
-      "$mainMod, 3, exec, hyprsome workspace 3"
-      "$mainMod, 4, exec, hyprsome workspace 4"
-      "$mainMod, 5, exec, hyprsome workspace 5"
-      "$mainMod, 6, exec, hyprsome workspace 6"
-      "$mainMod, 7, exec, hyprsome workspace 7"
-      "$mainMod, 8, exec, hyprsome workspace 8"
-      "$mainMod, 9, exec, hyprsome workspace 9"
-      "$mainMod, 0, exec, hyprsome workspace 10"
+      "${mod}, 1, exec, hyprsome workspace 1"
+      "${mod}, 2, exec, hyprsome workspace 2"
+      "${mod}, 3, exec, hyprsome workspace 3"
+      "${mod}, 4, exec, hyprsome workspace 4"
+      "${mod}, 5, exec, hyprsome workspace 5"
+      "${mod}, 6, exec, hyprsome workspace 6"
+      "${mod}, 7, exec, hyprsome workspace 7"
+      "${mod}, 8, exec, hyprsome workspace 8"
+      "${mod}, 9, exec, hyprsome workspace 9"
+      "${mod}, 0, exec, hyprsome workspace 10"
 
       # Moving windows to workspaces
-      "$mainMod SHIFT, 1, exec, hyprsome move 1"
-      "$mainMod SHIFT, 2, exec, hyprsome move 2"
-      "$mainMod SHIFT, 3, exec, hyprsome move 3"
-      "$mainMod SHIFT, 4, exec, hyprsome move 4"
-      "$mainMod SHIFT, 5, exec, hyprsome move 5"
-      "$mainMod SHIFT, 6, exec, hyprsome move 6"
-      "$mainMod SHIFT, 7, exec, hyprsome move 7"
-      "$mainMod SHIFT, 8, exec, hyprsome move 8"
-      "$mainMod SHIFT, 9, exec, hyprsome move 9"
-      "$mainMod SHIFT, 0, exec, hyprsome move 10"
+      "${mod} SHIFT, 1, exec, hyprsome move 1"
+      "${mod} SHIFT, 2, exec, hyprsome move 2"
+      "${mod} SHIFT, 3, exec, hyprsome move 3"
+      "${mod} SHIFT, 4, exec, hyprsome move 4"
+      "${mod} SHIFT, 5, exec, hyprsome move 5"
+      "${mod} SHIFT, 6, exec, hyprsome move 6"
+      "${mod} SHIFT, 7, exec, hyprsome move 7"
+      "${mod} SHIFT, 8, exec, hyprsome move 8"
+      "${mod} SHIFT, 9, exec, hyprsome move 9"
+      "${mod} SHIFT, 0, exec, hyprsome move 10"
 
       # Scratchpad
-      "$mainMod,       S, togglespecialworkspace,  magic"
-      "$mainMod SHIFT, S, movetoworkspace, special:magic"
+      "${mod},       S, togglespecialworkspace,  magic"
+      "${mod} SHIFT, S, movetoworkspace, special:magic"
 
       # Global
       "CTRL SHIFT, M, pass, class:^(discord|discord-stable)$"
       "CTRL SHIFT, N, pass, class:^(discord|discord-stable)$"
     ];
 
-    # Move/resize windows with mainMod + LMB/RMB and dragging
+    # Move/resize windows with mod + LMB/RMB and dragging
     bindm = [
-      "$mainMod, mouse:272, movewindow"
-      "$mainMod, mouse:273, resizewindow"
+      "${mod}, mouse:272, movewindow"
+      "${mod}, mouse:273, resizewindow"
     ];
 
     # Laptop multimedia keys for volume and LCD brightness
@@ -104,8 +87,8 @@ in {
       ",XF86AudioLowerVolume,  exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
       ",XF86AudioMute,         exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
       ",XF86AudioMicMute,      exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
-      "$mainMod, bracketright, exec, brightnessctl s 10%+"
-      "$mainMod, bracketleft,  exec, brightnessctl s 10%-"
+      "${mod}, bracketright, exec, brightnessctl s 10%+"
+      "${mod}, bracketleft,  exec, brightnessctl s 10%-"
     ];
 
     # Audio playback

@@ -1,7 +1,10 @@
-{
+{ inputs, pkgs, ... }: {
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
+    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    xwayland.enable = true;
+    configType = "hyprlang";
     settings = {
       env = [
         # Hint Electron apps to use Wayland
@@ -17,12 +20,6 @@
         "HDMI-A-1, 1920x1080@60, 1600x0, 1"
         "HDMI-A-2, 1600x900@60, 0x90, 1"
       ];
-      "$mainMod" = "SUPER";
-      "$terminal" = "alacritty";
-      "$fileManager" = "nemo";
-      "$menu" = "wofi";
-      "$mon_main" = "HDMI-A-1";
-      "$mon_sec" = "HDMI-A-2";
 
       workspace = [
         "1,monitor:$mon_main"
@@ -56,7 +53,6 @@
         "gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3"
         "gsettings set org.gnome.desktop.interface color-scheme matcha-gtk-theme"
         "waypaper --restore"
-        "Throne"
       ];
 
 
@@ -109,11 +105,6 @@
         workspace_swipe_forever	= true;
       };
 
-      dwindle = {
-        pseudotile = true;
-        preserve_split = true;
-      };
-
       master = {
         new_status = "slave";
         new_on_top = true;
@@ -126,57 +117,28 @@
       };
 
       windowrule = [
-        #programs rules
+        # programs rules (Hyprland 0.54 syntax)
 
-        "size 650 450, class:Alacritty"
-        "float, class:Alacritty"
+        "match:class Alacritty, size 650 450, float on"
 
-        "float, class:nemo"
+        "match:class nemo, float on"
 
-        "float,class:org.telegram.desktop"
-	"size 400 600,class:org.telegram.desktop"
+        "match:class org.telegram.desktop, float on, size 400 600"
 
-        "float,class:org.pulseaudio.pavucontrol"
-        "size 468 284,class:org.pulseaudio.pavucontrol"
-        "move 835 576,class:org.pulseaudio.pavucontrol"
+        "match:class org.pulseaudio.pavucontrol, float on, size 468 284, move 835 576"
 
-        "float, title:Картинка в картинке"
+        "match:title Картинка в картинке, float on"
 
-        "float,class:.blueman-manager-wrapped"
-        "size 537 321,class:.blueman-manager-wrapped"
-        "move 128 540,class:.blueman-manager-wrapped"
+        "match:class .blueman-manager-wrapped, float on, size 537 321, move 128 540"
 
-        "float,class:waypaper"
-        "size 772 541,class:waypaper"
-        "move 382 134,class:waypaper"
+        "match:class waypaper, float on, size 772 541, move 382 134"
 
-        "move 500 500,class:wofi"
+        "match:class wofi, move 500 500"
 
-        "float,class:YandexMusic"
-        "size 466 739,class:YandexMusic"
-	"float, class:io.missioncenter.MissionCenter"
-	"size 650 450, class:io.missioncenter.MissionCenter"
+        "match:class YandexMusic, float on, size 466 739"
+
+        "match:class io.missioncenter.MissionCenter, float on, size 650 450"
      ];
-
-      windowrulev2 = [
-
-        "bordersize 0, floating:0, onworkspace:w[t1]"
-
-        "float,class:(mpv)|(imv)|(showmethekey-gtk)"
-        "move 990 60,size 900 170,pin,noinitialfocus,class:(showmethekey-gtk)"
-        "noborder,nofocus,class:(showmethekey-gtk)"
-
-        "suppressevent maximize, class:.*"
-        "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
-
-        "opacity 0.0 override, class:class:xwaylandvideobridge"
-        "noanim, class:class:xwaylandvideobridge"
-        "noinitialfocus, class:class:xwaylandvideobridge"
-        "maxsize 1 1, class:class:xwaylandvideobridge"
-        "noblur, class:class:xwaylandvideobridge"
-        "nofocus, class:class:xwaylandvideobridge"
-      ];
-
     };
   };
 }

@@ -12,12 +12,10 @@
     openvpn
     telegram-desktop
     unzip
-    spotify
     libreoffice
     obs-studio
     steam
     mpv
-    postman
     qbittorrent
 
     # CLI
@@ -29,7 +27,6 @@
 
     # WM stuff
     xdg-desktop-portal-gtk
-    xdg-desktop-portal-hyprland
     grim
     slurp
     swappy

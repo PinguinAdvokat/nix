@@ -1,6 +1,5 @@
 { pkgs, caelestia-shell, ... }: {
   environment.systemPackages = with pkgs; [
-    clash-verge-rev
     file
     musl
     dig
@@ -15,8 +14,7 @@
     kitty
     firefox
     home-manager
-    #chromium
-    neofetch
+    fastfetch
     pfetch
     pavucontrol
     hyprpolkitagent
@@ -26,7 +24,6 @@
     wl-clipboard
     wl-clip-persist
     python3
-    pipx
     kdiskmark
     mpvpaper
     bluez
