@@ -8,16 +8,21 @@
 {
   imports =
   [
-    ./hardware-configuration.nix 
+    ./hardware-configuration.nix
     ./system
   ];
   time.timeZone = "Europe/Moscow";
 
-  nixpkgs.config.allowUnfree = true; 
+  nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   networking.networkmanager.enable = true;
+
   environment.shells = with pkgs; [ zsh ];
+  environment.pathsToLink = [
+    "/share/applications"
+    "/share/xdg-desktop-portal"
+  ];
 
   networking.firewall.enable = false;
 
@@ -30,4 +35,3 @@
 
   system.stateVersion = "26.05";
 }
-
