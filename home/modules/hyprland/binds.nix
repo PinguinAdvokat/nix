@@ -1,6 +1,7 @@
 { pkgs, ... }:
 let
   mod = "SUPER";
+  ipc = "noctalia-shell ipc call";
 in {
   wayland.windowManager.hyprland.settings = {
     bind = [
@@ -10,13 +11,13 @@ in {
       "${mod},       E, exec, nemo"
       "${mod},       F, togglefloating,"
       "${mod},       C, fullscreen,"
-      "${mod},       D, exec, wofi --show drun"
+      "${mod},       D, exec, ${ipc} launcher toggle"
       "${mod},       P, pin,"
       "${mod},       M, exec, bemoji -cn"
       "${mod},       V, exec, cliphist list | $menu --dmenu | cliphist decode | wl-copy"
       "${mod},       B, exec, pkill -SIGUSR2 waybar"
       "${mod} SHIFT, B, exec, pkill -SIGUSR1 waybar"
-      "${mod},       L, exec, loginctl lock-session"
+      "${mod},       L, exec, ${ipc} lockScreen lock"
       "${mod},       P, exec, hyprpicker -an"
       "${mod},       N, exec, swaync-client -t"
       ", Print, exec, grimblast --notify --freeze copysave area"

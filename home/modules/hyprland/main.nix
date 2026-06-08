@@ -2,7 +2,6 @@
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     xwayland.enable = true;
     configType = "hyprlang";
     settings = {
@@ -48,11 +47,9 @@
         "wl-clipboard-history -t"
         "wl-paste --watch cliphist store"
         "wl-clip-persist --clipboard regular"
-        "hyprctl setcursor Bibata-Modern-Ice 22"
+        #"hyprctl setcursor Bibata-Modern-Ice 22"
         "systemctl --user start hyprpolkitagent"
-        "gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3"
-        "gsettings set org.gnome.desktop.interface color-scheme matcha-gtk-theme"
-        "waypaper --restore"
+        "noctalia-shell"
       ];
 
 

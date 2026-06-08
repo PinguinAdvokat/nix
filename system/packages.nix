@@ -1,4 +1,4 @@
-{ pkgs, caelestia-shell, ... }: {
+{ pkgs, inputs, ... }: {
   environment.systemPackages = with pkgs; [
     file
     musl

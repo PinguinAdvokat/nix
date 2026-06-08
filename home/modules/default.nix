@@ -4,8 +4,6 @@
     ./bash.nix
     ./firefox.nix
     ./git.nix
-    ./mako.nix
-    #./theme.nix
     ./zed.nix
     ./zsh.nix
     ./firefox
@@ -13,5 +11,6 @@
     ./swaync
     ./wofi
     ./swayimg.nix
+    ./noctalia
   ];
 }
