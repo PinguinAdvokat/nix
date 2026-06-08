@@ -18,6 +18,8 @@
 
   networking.networkmanager.enable = true;
 
+  virtualisation.vmware.host.enable = true;
+
   environment.shells = with pkgs; [ zsh ];
   environment.pathsToLink = [
     "/share/applications"

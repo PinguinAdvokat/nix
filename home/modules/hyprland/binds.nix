@@ -12,6 +12,7 @@ in {
       "${mod},       F, togglefloating,"
       "${mod},       C, fullscreen,"
       "${mod},       D, exec, ${ipc} launcher toggle"
+      "${mod} SHIFT, W, exec, ${ipc} wallpaper random"
       "${mod},       P, pin,"
       "${mod},       M, exec, bemoji -cn"
       "${mod},       V, exec, cliphist list | $menu --dmenu | cliphist decode | wl-copy"
