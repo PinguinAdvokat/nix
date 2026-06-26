@@ -13,6 +13,10 @@ in {
       "${mod},       C, fullscreen,"
       "${mod},       D, exec, ${ipc} launcher toggle"
       "${mod} SHIFT, W, exec, ${ipc} wallpaper random"
+      "${mod} SHIFT, Z, exec, zeditor"
+      "${mod} SHIFT, F, exec, firefox"
+      "${mod} SHIFT, T, exec, Telegram"
+      "${mod} SHIFT, D, exec, discord"
       "${mod},       P, pin,"
       "${mod},       M, exec, bemoji -cn"
       "${mod},       V, exec, cliphist list | $menu --dmenu | cliphist decode | wl-copy"
@@ -68,13 +72,9 @@ in {
       "${mod} SHIFT, 9, exec, hyprsome move 9"
       "${mod} SHIFT, 0, exec, hyprsome move 10"
 
-      # Scratchpad
-      "${mod},       S, togglespecialworkspace,  magic"
-      "${mod} SHIFT, S, movetoworkspace, special:magic"
-
       # Global
       "CTRL SHIFT, M, pass, class:^(discord|discord-stable)$"
-      "CTRL SHIFT, N, pass, class:^(discord|discord-stable)$"
+      "CTRL SHIFT, D, pass, class:^(discord|discord-stable)$"
     ];
 
     # Move/resize windows with mod + LMB/RMB and dragging

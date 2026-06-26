@@ -124,6 +124,8 @@
 
         "match:class org.telegram.desktop, float on, size 400 600"
 
+        "match:initial_class Minecraft\*.*, float on"
+
         "match:class org.pulseaudio.pavucontrol, float on, size 468 284, move 835 576"
 
         "match:title Картинка в картинке, float on"

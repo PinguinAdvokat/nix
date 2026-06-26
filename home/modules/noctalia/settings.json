@@ -445,7 +445,7 @@
     "criticalUrgencyDuration": 15,
     "density": "default",
     "enableBatteryToast": true,
-    "enableKeyboardLayoutToast": true,
+    "enableKeyboardLayoutToast": false,
     "enableMarkdown": false,
     "enableMediaToast": false,
     "enabled": true,

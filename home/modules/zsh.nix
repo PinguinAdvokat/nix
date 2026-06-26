@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -14,5 +14,9 @@
       plugins = [ "git" ];
       theme = "arrow";
     };
+    
+    initExtra = ''
+      export LD_LIBRARY_PATH=${pkgs.libGL}/lib/
+    '';
   };
 }

@@ -12,7 +12,8 @@
     openvpn
     telegram-desktop
     unzip
-    libreoffice
+    p7zip
+    onlyoffice-desktopeditors
     obs-studio
     steam
     mpv
@@ -22,7 +23,8 @@
     firefox
     kitty
     kdePackages.dolphin
-    nemo
+    nemo-with-extensions
+    file-roller
 
     # CLI
     cava

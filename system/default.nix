@@ -6,5 +6,6 @@
         ./styles.nix
         ./users.nix
         ./packages.nix
+        ./comfyui.nix
     ];
 }

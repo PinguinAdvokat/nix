@@ -8,7 +8,6 @@
     ./zsh.nix
     ./firefox
     ./hyprland
-    ./swaync
     ./wofi
     ./swayimg.nix
     ./noctalia

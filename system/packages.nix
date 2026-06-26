@@ -1,5 +1,6 @@
 { pkgs, inputs, ... }: {
   environment.systemPackages = with pkgs; [
+    uv
     file
     musl
     dig
@@ -20,5 +21,15 @@
     python3
     bluez
     easyeffects
+
+    rocmPackages.rocminfo
+    rocmPackages.rocm-smi
+    rocmPackages.clr
+    rocmPackages.hipblas
+    rocmPackages.rocblas
+    rocmPackages.miopen
+    
+    libxcb-cursor
+    xorg.libxcb
    ];
 }

@@ -14,6 +14,7 @@
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    comfyui-nix.url = "github:utensils/comfyui-nix";
 	};
 
 
