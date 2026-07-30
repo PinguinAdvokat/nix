@@ -1,5 +1,8 @@
 { pkgs, inputs, ... }: {
   environment.systemPackages = with pkgs; [
+    llama-cpp-rocm
+    lmstudio
+    google-chrome
     uv
     file
     musl

@@ -7,6 +7,7 @@
 
     shellAliases = {
       flake = "sudo nixos-rebuild switch --flake ~/nix/";
+      ai = "llama-server --models-dir models --api-key Skyler1626 --port 8080 --host 0.0.0.0";
     };
 
     oh-my-zsh = {

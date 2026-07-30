@@ -7,5 +7,7 @@
         ./users.nix
         ./packages.nix
         ./comfyui.nix
+	./autossh.nix
+	./aitunnel.nix
     ];
 }
