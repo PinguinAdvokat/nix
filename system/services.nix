@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
   services.displayManager.ly.enable = true;
   services.gvfs.enable = true;
   services.udisks2.enable = true;
@@ -15,5 +15,10 @@
       PasswordAuthentication = false;
       PermitRootLogin = "no";
     };
-};
+  };
+
+  services.hardware.openrgb = {
+    enable = true;
+    motherboard = "amd";  # или "amd", в зависимости от платформы
+  };
 }

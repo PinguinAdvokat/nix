@@ -3,6 +3,7 @@
 
   home.packages = with pkgs; [
     # desktop
+    arduino-ide
     mission-center
     nmap
     unrar
