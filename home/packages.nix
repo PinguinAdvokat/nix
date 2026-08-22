@@ -3,6 +3,7 @@
 
   home.packages = with pkgs; [
     # desktop
+    opencode
     arduino-ide
     mission-center
     nmap
