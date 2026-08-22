@@ -11,6 +11,5 @@
     ./wofi
     ./swayimg.nix
     ./noctalia
-    ./PillBar
   ];
 }
