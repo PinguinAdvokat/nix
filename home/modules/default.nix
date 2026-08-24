@@ -11,5 +11,6 @@
     ./wofi
     ./swayimg.nix
     ./noctalia
+    ./chillpill-shell.nix
   ];
 }

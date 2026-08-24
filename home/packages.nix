@@ -3,6 +3,7 @@
 
   home.packages = with pkgs; [
     # desktop
+    spotify
     opencode
     arduino-ide
     mission-center
