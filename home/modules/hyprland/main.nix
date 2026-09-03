@@ -51,7 +51,6 @@
         "wl-clip-persist --clipboard regular"
         #"hyprctl setcursor Bibata-Modern-Ice 22"
         "systemctl --user start hyprpolkitagent"
-        "noctalia-shell"
       ];
 
 

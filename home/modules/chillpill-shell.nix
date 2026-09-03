@@ -7,6 +7,8 @@
     settings = {
       clockFormat = "HH:mm";
       maxWorkspaces = 3;
+      country = "RU";
+      pillScale = 1.2;
     };
   };
 }

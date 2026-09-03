@@ -3,6 +3,10 @@
 
   home.packages = with pkgs; [
     # desktop
+    claude-code
+    ffmpeg
+    remmina
+    quickshell
     spotify
     opencode
     arduino-ide
@@ -34,7 +38,10 @@
     btop
 
     # coding stuff
-    vscode
+    vscodium
+    protobuf
+    protoc-gen-go
+    protoc-gen-go-grpc
 
     # WM stuff
     xdg-desktop-portal-gtk

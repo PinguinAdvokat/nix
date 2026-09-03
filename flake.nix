@@ -14,7 +14,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     chillpill-shell = {
-      url = "github:PinguinAdvokat/chillpill-shell";
+      url = "github:LUCKYS1NGHH/chillpill-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 		stylix.url = "github:nix-community/stylix/release-26.05";

@@ -1,7 +1,7 @@
 { pkgs, ... }:
 let
   mod = "SUPER";
-  ipc = "noctalia-shell ipc call";
+  ipc = "noctalia msg";
 in {
   wayland.windowManager.hyprland.settings = {
     bind = [
@@ -11,8 +11,9 @@ in {
       "${mod},       E, exec, nemo"
       "${mod},       F, togglefloating,"
       "${mod},       C, fullscreen,"
-      "${mod},       D, exec, ${ipc} launcher toggle"
-      "${mod} SHIFT, W, exec, ${ipc} wallpaper random"
+      "${mod},       D, exec, ${ipc} panel-toggle launcher"
+      "${mod} SHIFT, W, exec, ${ipc} wallpaper-random"
+      "${mod},       V, exec, ${ipc} panel-toggle clipboard"
       "${mod} SHIFT, Z, exec, zeditor"
       "${mod} SHIFT, F, exec, firefox"
       "${mod} SHIFT, T, exec, Telegram"

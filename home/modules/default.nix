@@ -12,5 +12,6 @@
     ./swayimg.nix
     ./noctalia
     ./chillpill-shell.nix
+    ./ssh.nix
   ];
 }
