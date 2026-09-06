@@ -14,6 +14,7 @@
     settings = {
       PasswordAuthentication = false;
       PermitRootLogin = "no";
+      X11Forwarding = true;
     };
   };
 
