@@ -8,7 +8,7 @@
   programs.noctalia = {
     enable = true;
     systemd.enable = true;
-    #settings =
+    settings = ./config.toml;
       #(builtins.fromJSON
         #(builtins.readFile ./settings.json));
   };

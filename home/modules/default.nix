@@ -14,5 +14,6 @@
     ./chillpill-shell.nix
     ./ssh.nix
     ./vnc.nix
+    ./niri.nix
   ];
 }
