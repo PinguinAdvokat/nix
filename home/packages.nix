@@ -3,6 +3,10 @@
 
   home.packages = with pkgs; [
     # desktop
+    opencode
+    docker-compose
+    postman
+    wlvncc
     claude-code
     ffmpeg
     remmina

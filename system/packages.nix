@@ -1,5 +1,8 @@
 { pkgs, inputs, ... }: {
   environment.systemPackages = with pkgs; [
+    nodejs_26
+    frp
+    wayvnc
     openrgb
     llama-cpp-rocm
     lmstudio

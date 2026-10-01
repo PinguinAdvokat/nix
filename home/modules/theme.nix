@@ -45,4 +45,11 @@
       '';
     };
   };
+  xdg.desktopEntries.vmware-workstation = {
+    name = "VMware Workstation";
+    exec = "env GTK_THEME=Adwaita-dark vmware %U";
+    icon = "vmware-workstation";
+    terminal = false;
+    categories = [ "System" ];
+};
 }

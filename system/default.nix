@@ -7,5 +7,6 @@
         ./users.nix
         ./packages.nix
         ./comfyui.nix
+        ./frpc.nix
     ];
 }
