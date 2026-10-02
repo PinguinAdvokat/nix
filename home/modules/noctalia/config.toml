@@ -38,7 +38,7 @@ order = [ "widgets" ]
     hover_highlight = true
     layer = "top"
     margin_edge = 0
-    margin_ends = 493
+    margin_ends = 516
     margin_opposite_edge = 0
     padding = 14
     panel_overlap = 1
@@ -598,7 +598,7 @@ swap_pct_activity_threshold = 20.0
 swap_pct_critical_threshold = 80.0
 
 [theme]
-builtin = "Gruvbox"
+builtin = "Catppuccin"
 community_palette = "Oxocarbon"
 custom_palette = ""
 mode = "dark"
@@ -662,6 +662,7 @@ type = "volume"
 
 [widget.keyboard_layout]
 hide_when_single_layout = false
+show_glyph = false
 type = "keyboard_layout"
 
 [widget.lock_keys]
@@ -678,6 +679,10 @@ max_length = 220.0
 min_length = 80.0
 title_scroll = "none"
 type = "media"
+
+[widget.network]
+show_label = false
+type = "network"
 
 [widget.network_rx]
 stat = "net_rx"
@@ -702,6 +707,10 @@ type = "spacer"
 [widget.temp]
 stat = "cpu_temp"
 type = "sysmon"
+
+[widget.volume]
+show_label = false
+type = "volume"
 
 [widget.workspaces]
 hide_when_empty = true

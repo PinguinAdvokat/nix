@@ -54,9 +54,9 @@ output "HDMI-A-1" {
 // Window Rules
 // ==================================================
 
-// Global corner radius
+// Global corner radius (Catppuccin Mocha)
 window-rule {
-    geometry-corner-radius 0
+    geometry-corner-radius 7
     clip-to-geometry true
 }
 
@@ -92,6 +92,7 @@ window-rule {
     match app-id="^org.gnome.Loupe$"
     match app-id="^org.gnome.Showtime$"
     match app-id="^Waydroid$"
+    match app-id="^nemo$"
 }
 
 window-rule {
@@ -101,6 +102,7 @@ window-rule {
     match app-id="^org.mozilla.firefox$"
     open-on-workspace "1"
 }
+
 window-rule {
     match app-id="^antigravity-ide$"
     match app-id="^code$"
@@ -130,7 +132,7 @@ workspace "4"
 workspace "5"
 
 layout {
-    gaps 16
+    gaps 10
     center-focused-column "never"
     always-center-single-column
 
@@ -141,9 +143,9 @@ layout {
     }
 
     focus-ring {
-        width 3
-        active-color "#313244"
-        inactive-color "#181825"
+        width 2
+        active-color "#cba6f7"
+        inactive-color "#45475a"
     }
 
     shadow {
@@ -179,24 +181,24 @@ recent-windows {
 
 animations {
     workspace-switch {
-        spring damping-ratio=1.0 stiffness=2250 epsilon=0.0001
+        spring damping-ratio=0.85 stiffness=600 epsilon=0.0001
     }
     window-open {
-        duration-ms 107
+        duration-ms 350
         curve "ease-out-expo"
     }
     window-close {
-        duration-ms 80
+        duration-ms 220
         curve "ease-out-quad"
     }
     horizontal-view-movement {
-        spring damping-ratio=1.0 stiffness=1800 epsilon=0.0001
+        spring damping-ratio=0.85 stiffness=500 epsilon=0.0001
     }
     window-movement {
-        spring damping-ratio=1.0 stiffness=2025 epsilon=0.0001
+        spring damping-ratio=0.8 stiffness=550 epsilon=0.0001
     }
     window-resize {
-        spring damping-ratio=1.0 stiffness=2025 epsilon=0.0001
+        spring damping-ratio=0.8 stiffness=550 epsilon=0.0001
     }
     config-notification-open-close {
         spring damping-ratio=0.6 stiffness=2250 epsilon=0.001
@@ -205,11 +207,11 @@ animations {
         spring damping-ratio=1.0 stiffness=1125 epsilon=0.01
     }
     screenshot-ui-open {
-        duration-ms 133
+        duration-ms 200
         curve "ease-out-quad"
     }
     overview-open-close {
-        spring damping-ratio=1.0 stiffness=1800 epsilon=0.0001
+        spring damping-ratio=0.85 stiffness=500 epsilon=0.0001
     }
     recent-windows-close {
         spring damping-ratio=1.0 stiffness=2025 epsilon=0.001
@@ -230,13 +232,14 @@ binds {
     Mod+V { spawn "noctalia" "msg" "panel-toggle" "clipboard"; }
     
     // App Launchers
-    Mod+T           { spawn "alacritty"; }
+    Mod+T           { spawn "kitty"; }
     Super+Shift+L   { spawn "swaylock"; }
     Super+E         { spawn "nemo"; }
     Mod+Comma       { spawn "flatpak" "run" "emote"; }
     Ctrl+Shift+Print{ spawn "flatpak" "run" "be.alexandervanhee.gradia"; }
     Mod+Shift+Z     { spawn "zeditor"; }
     Mod+Shift+B     { spawn "firefox"; }
+    Mod+Shift+T     { spawn "Telegram"; }
 
 
     // Media & System Volume Keys

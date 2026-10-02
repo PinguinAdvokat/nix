@@ -1,6 +1,6 @@
 { lib, ... }: {
   programs.alacritty = {
-    enable = true;
+    enable = false;
     settings = {
       font = {
         builtin_box_drawing = true;
