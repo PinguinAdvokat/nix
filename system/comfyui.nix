@@ -3,7 +3,7 @@
   nixpkgs.overlays = [ inputs.comfyui-nix.overlays.default ];
 
   services.comfyui = {
-    enable = true;
+    enable = false;
     gpuSupport = "rocm";  # Enable NVIDIA GPU acceleration (recommended for most users)
     # gpuSupport = "rocm";  # Enable AMD GPU acceleration
     # cudaCapabilities = [ "8.9" ];  # Optional: optimize system CUDA packages for RTX 40xx

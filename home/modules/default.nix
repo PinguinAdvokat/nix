@@ -7,12 +7,9 @@
     ./git.nix
     ./zed.nix
     ./zsh.nix
-    ./firefox
     ./hyprland
-    ./wofi
     ./swayimg.nix
     ./noctalia
-    ./chillpill-shell.nix
     ./ssh.nix
     ./vnc.nix
     ./niri.nix

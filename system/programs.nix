@@ -20,21 +20,15 @@
     curl
     expat
     ];
-    
+
     programs.steam = {
       enable = true;
       # Фикс черного экрана: принудительно добавляем флаг совместимости
       package = pkgs.steam.override {
-        extraArgs = "-system-composer"; 
+        extraArgs = "-system-composer";
       };
     };
 
-    programs.hyprland.enable = true;
-
-    programs.winbox = {
-    	enable = true;
-      openFirewall = true;
-    };
     environment.sessionVariables = {
       QT_QPA_PLATFORM = "wayland;xcb";
     };

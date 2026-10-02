@@ -3,17 +3,13 @@
 
   home.packages = with pkgs; [
     # desktop
-    opencode
     docker-compose
     postman
     wlvncc
     claude-code
     ffmpeg
-    remmina
     quickshell
     spotify
-    opencode
-    arduino-ide
     mission-center
     nmap
     unrar
@@ -28,10 +24,8 @@
     obs-studio
     mpv
     qbittorrent
-    kdiskmark
     discord
     firefox
-    kitty
     kdePackages.dolphin
     nemo-with-extensions
     file-roller

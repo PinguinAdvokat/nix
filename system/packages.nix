@@ -5,9 +5,7 @@
     frp
     wayvnc
     openrgb
-    llama-cpp-rocm
     lmstudio
-    google-chrome
     uv
     file
     musl
