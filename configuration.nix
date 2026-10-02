@@ -36,6 +36,7 @@
     extraSpecialArgs = { inherit inputs; };
     users.pinguin = import ./home/home.nix;
   };
+  systemd.user.services.niri.enableDefaultPath = false;
 
   system.stateVersion = "26.05";
 }

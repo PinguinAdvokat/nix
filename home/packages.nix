@@ -26,7 +26,6 @@
     p7zip
     onlyoffice-desktopeditors
     obs-studio
-    steam
     mpv
     qbittorrent
     kdiskmark

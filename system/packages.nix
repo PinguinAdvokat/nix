@@ -1,5 +1,6 @@
 { pkgs, inputs, ... }: {
   environment.systemPackages = with pkgs; [
+    xwayland-satellite
     nodejs_26
     frp
     wayvnc
