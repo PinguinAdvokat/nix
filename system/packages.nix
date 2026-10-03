@@ -29,6 +29,6 @@
     easyeffects
 
     libxcb-cursor
-    xorg.libxcb
+    libxcb
    ];
 }

@@ -16,7 +16,7 @@
       theme = "arrow";
     };
     
-    initExtra = ''
+    initContent = ''
       export LD_LIBRARY_PATH=${pkgs.libGL}/lib/
     '';
   };

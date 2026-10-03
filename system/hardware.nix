@@ -9,9 +9,6 @@
     services.pulseaudio.enable = false;
     services.xserver.videoDrivers = [ "amdgpu" ];
     hardware.bluetooth.enable = true;
-    hardware.opengl = {
-      enable = true;
-    };
     hardware.graphics = {
         enable = true;
         enable32Bit = true;
