@@ -233,13 +233,12 @@ binds {
     
     // App Launchers
     Mod+T           { spawn "kitty"; }
-    Super+Shift+L   { spawn "swaylock"; }
-    Super+E         { spawn "nemo"; }
-    Mod+Comma       { spawn "flatpak" "run" "emote"; }
-    Ctrl+Shift+Print{ spawn "flatpak" "run" "be.alexandervanhee.gradia"; }
+    Mod+E           { spawn "nemo"; }
     Mod+Shift+Z     { spawn "zeditor"; }
     Mod+Shift+B     { spawn "firefox"; }
     Mod+Shift+T     { spawn "Telegram"; }
+    Mod+Shift+D     { spawn "discord"; }
+    Ctrl+Shift+Escape { spawn "missioncenter"; }
 
 
     // Media & System Volume Keys

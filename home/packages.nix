@@ -1,6 +1,8 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
     # desktop
+    mpv
+    mpvpaper
     docker-compose
     postman
     wlvncc

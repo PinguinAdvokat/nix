@@ -12,7 +12,7 @@
     Install.WantedBy = [ "graphical-session.target" ];
 
     Service = {
-      ExecStart = "${pkgs.wayvnc}/bin/wayvnc -o HDMI-A-1 -f 60 -v";
+      ExecStart = "${pkgs.wayvnc}/bin/wayvnc -o HDMI-A-1 -f 60";
       Restart = "on-failure";
       RestartSec = 5;
     };
