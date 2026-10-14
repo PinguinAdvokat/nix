@@ -93,6 +93,7 @@ window-rule {
     match app-id="^org.gnome.Showtime$"
     match app-id="^Waydroid$"
     match app-id="^nemo$"
+    match app-id="^VirtualBox$"
 }
 
 window-rule {
@@ -345,7 +346,8 @@ binds {
     Mod+Shift+F { switch-focus-between-floating-and-tiling; }
 
     // Screenshots
-    Print       { screenshot; }
+    Print       { spawn-sh "grimblast --notify --freeze copysave area"; }
+    Mod+Shift+S { spawn-sh "grim -g \"$(slurp)\" - | swappy -f -"; }
     Ctrl+Print  { screenshot-screen; }
     Alt+Print   { screenshot-window; }
 

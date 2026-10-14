@@ -45,6 +45,9 @@
     grim
     slurp
     swappy
+    grimblast
+    libnotify
+    jq
     hyprsome
     blueman
     dconf
